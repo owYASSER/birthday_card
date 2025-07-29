@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>بطاقة عيد ميلاد 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #f9f4f4, #e7d8f0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      direction: rtl;
+    }
+    .card {
+      background-color: #ffffffdd;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 90%;
+      padding: 25px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+    .title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #a145d1;
+      margin-bottom: 20px;
+    }
+    .message {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+    /* إزالة زر spotify-button لأنه غير مستخدم الآن */
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.postimg.cc/GtFzCbt9/IMG-4787.jpg" alt="صورة البطاقة" />
+
+    <div class="title">كل عام وأنتِ بخير </div>
+
+    <div class="message">
+      <p>يا أفضل دوسرية، كل عام وأنتِ بأفضل حال، والله لا يغيّرك إلا للأفضل يا أروع من عرفت </p>
+      <p>كل عام وأنتِ بصحة وسلامة يا يونا. الصدق ما أعرف وش أقول، لكن الله لا يقرّب صوبك مكروه أبدًا.</p>
+      <p>رغم إني ما عرفتك من زمان، لكن والله تستاهلين كل خير، وفعلاً أنتِ من أفضل الناس اللي عرفتهم </p>
+      <p>وإذا شفتي هذي، شوفي بعد على باتل نت، فيه هدية بسيطة </p>
+      <p>الله يجعل أيامك كلها فرح وسعادة، ويحقق لك كل أمانيك </p>
+    </div>
+
+    <!-- مشغل ساوند كلاود -->
+    <iframe id="sc-widget" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1572822208&color=%2372656c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+    </iframe>
+
+  </div>
+
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+  <script>
+    var iframeElement = document.getElementById('sc-widget');
+    var widget = SC.Widget(iframeElement);
+
+    widget.bind(SC.Widget.Events.READY, function() {
+      // نحدد وقت التشغيل إلى ثانية 63 (63000 ملي ثانية)
+      widget.seekTo(63000);
+      // لو تبي تشغل الأغنية تلقائيًا بعد الانتقال للثانية 63، فك السطر التالي
+      // widget.play();
+    });
+  </script>
+</body>
+</html>
